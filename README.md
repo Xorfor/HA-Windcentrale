@@ -49,3 +49,8 @@ Use `sensor.yaml` to setup the entities for HA
       value_template: '{{ states.sensor.de_grote_geert.attributes["windSpeed"] }}'
       unit_of_measurement: "Bft"
 ```
+Also change the names for eg. the sensor, friendly_name, etc. in the name of your windmill.
+
+If you have 2 shares from de Grote Geert, you get info like:
+
+![Screenshot](de_grote_geert.jpg)
