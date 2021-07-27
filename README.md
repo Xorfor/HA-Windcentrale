@@ -32,4 +32,4 @@ Also change the names for eg. the sensor, friendly_name, etc. in the name of you
 ## Screenshots
 If you have 2 shares from de Grote Geert, you get info like:
 
-![Screenshot](de_grote_geert.jpg)
+![Screenshot](images/de_grote_geert.jpg)
