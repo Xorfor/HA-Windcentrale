@@ -1,4 +1,5 @@
 # Windcentrale
+If you have shares from [de Windcentrale](//windcentrale.nl), this configuration gives you all kind of information about your windmill.
 
 ## Warning
 At this moment (jul-2021) windmills like 'De Trouwe Wachter', don't send data with this service.
@@ -24,36 +25,11 @@ The id can be found in the following table:
 ## Configuration
 Be sure that the `sensor: !include sensor.yaml` entry is specified in the `configuration.yaml`
 
-Use `sensor.yaml` to setup the entities for HA
+Use [sensor.yaml](sensor.yaml) to setup the entities for HA.
 
-```
-- platform: rest
-  name: De Grote Geert
-  device_class: power
-  scan_interval: 60
-  resource: https://zep-api.windcentrale.nl/production/xxx/live # for .../xxx/... replace the 'xxx' for the id of your windmill
-  json_attributes:
-    - windSpeed
-    - windDirection
-    - powerAbsTot
-    - powerAbsWd
-    - powerRel
-    - diameter
-    - rpm
-    - pulsating
-    - hoursRunThisYear
-    - runPercentage
-  value_template: "{{ value_json.powerAbsWd * yyy }}" # for ... * yyy ... replace the 'yyy' for the number of windshares you own
-  unit_of_measurement: "W"
-- platform: template
-  sensors:
-    de_grote_geert_speed:
-      friendly_name: "De Grote Geert - Windsnelheid"
-      value_template: '{{ states.sensor.de_grote_geert.attributes["windSpeed"] }}'
-      unit_of_measurement: "Bft"
-```
 Also change the names for eg. the sensor, friendly_name, etc. in the name of your windmill.
 
+## Screenshots
 If you have 2 shares from de Grote Geert, you get info like:
 
 ![Screenshot](de_grote_geert.jpg)
