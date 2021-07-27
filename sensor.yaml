@@ -1,0 +1,26 @@
+# Windcentrale
+# Source: https://github.com/Xorfor/Domoticz-Windcentrale-Plugin/wiki/Windmills
+- platform: rest
+  name: De Grote Geert
+  device_class: power
+  scan_interval: 60
+  resource: https://zep-api.windcentrale.nl/production/1/live # for .../1/... replace the '1' for the id of your windmill
+  json_attributes:
+    - windSpeed
+    - windDirection
+    - powerAbsTot
+    - powerAbsWd
+    - powerRel
+    - diameter
+    - rpm
+    - pulsating
+    - hoursRunThisYear
+    - runPercentage
+  value_template: "{{ value_json.powerAbsWd * 2 }}" # for ... * 2 ... replace the '2' for the number of windshares you own
+  unit_of_measurement: "W"
+- platform: template
+  sensors:
+    de_grote_geert_speed:
+      friendly_name: "De Grote Geert - Windsnelheid"
+      value_template: '{{ states.sensor.de_grote_geert.attributes["windSpeed"] }}'
+      unit_of_measurement: "Bft"
