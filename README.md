@@ -28,6 +28,33 @@ You can use [customize.yaml](customize.yaml) to add nice icons.
 
 Also change the names for eg. the sensor, friendly_name, etc. in the name of your windmill.
 
+## Data
+## URL example
+https://zep-api.windcentrale.nl/production/1/live
+
+## Output
+The json output looks like:
+```json
+{
+  "powerProducerId": "f588ce00-92ee-45ee-b480-f7d6df204034",
+  "windSpeed": 3,
+  "windDirection": "W",
+  "powerAbsTot": 70,
+  "powerAbsWd": 8,
+  "powerRel": 3,
+  "diameter": 14,
+  "rpm": 8.9,
+  "pulsating": false,
+  "kwh": 2379836,
+  "kwhForecast": 4955000,
+  "hoursRunThisYear": 4817.4833333333,
+  "runPercentage": 94.52746398166339,
+  "windSpeedForecast": 3,
+  "windDirectionForecast": "W",
+  "timestamp": "2018-07-30T21:44:55"
+}
+```
+
 ## Screenshots
 If you have 2 shares from de Grote Geert, you get info like:
 
