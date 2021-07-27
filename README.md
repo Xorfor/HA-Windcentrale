@@ -27,9 +27,11 @@ Be sure that the `sensor: !include sensor.yaml` entry is specified in the `confi
 
 Use [sensor.yaml](sensor.yaml) to setup the entities for HA.
 
+You can use [customize.yaml](customize.yaml) to add 
+
 Also change the names for eg. the sensor, friendly_name, etc. in the name of your windmill.
 
-## Screenshots
+## Screenshotsnice icons.
 If you have 2 shares from de Grote Geert, you get info like:
 
 ![Screenshot](images/de_grote_geert.jpg)
