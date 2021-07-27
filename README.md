@@ -1,9 +1,6 @@
 # Windcentrale
 If you have shares from [de Windcentrale](//windcentrale.nl), this configuration gives you all kind of information about your windmill.
 
-## Warning
-At this moment (jul-2021) windmills like 'De Trouwe Wachter', don't send data with this service.
-
 ## Prerequisites
 To configure a windmill from the WindCentrale in HA, you needs to know, the id from the windmill and the number of windshares you own.
 The id can be found in the following table:
