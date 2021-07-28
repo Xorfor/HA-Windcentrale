@@ -60,3 +60,6 @@ If you have 2 shares from de Grote Geert, you get info like:
 
 ![Screenshot](images/de_grote_geert.jpg)
 ![Screenshot](images/overview.jpg)
+
+## Support
+[By me a 🍺](https://www.buymeacoffee.com/xorfor)
