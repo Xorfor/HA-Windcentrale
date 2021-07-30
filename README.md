@@ -1,6 +1,9 @@
 # Windcentrale
 If you have shares from [de Windcentrale](//windcentrale.nl), this configuration gives you all kind of information about your windmill.
 
+## Support
+[By me a 🍺](https://www.buymeacoffee.com/xorfor)
+
 ## Prerequisites
 To configure a windmill from the WindCentrale in HA, you needs to know, the id from the windmill and the number of windshares you own.
 The id can be found in the following table:
@@ -61,5 +64,3 @@ If you have 2 shares from de Grote Geert, you get info like:
 ![Screenshot](images/de_grote_geert.jpg)
 ![Screenshot](images/overview.jpg)
 
-## Support
-[By me a 🍺](https://www.buymeacoffee.com/xorfor)
