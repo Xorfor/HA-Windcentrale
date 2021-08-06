@@ -24,3 +24,22 @@
       friendly_name: "De Grote Geert - Windsnelheid"
       value_template: '{{ states.sensor.de_grote_geert.attributes["windSpeed"] }}'
       unit_of_measurement: "Bft"
+
+- platform: rest
+  name: De Grote Geert - Energy
+  device_class: power
+  scan_interval: 300
+  resource: https://zep-api.windcentrale.nl/production/1 # for .../1 replace the '1' for the id of your windmill
+  json_attributes: 
+    - response
+  # below for ... (2 * 1000 * s / w) ... replace the '2' for the number of windshares you own
+  value_template: >-
+    {% set w = value_json["response"]["productie"]["@winddelen"] | float%}
+    {% for x in value_json["response"]["productie"]["subset"] -%}
+      {% if x["@period"] == "DAY" %}
+        {% set s = x["@sum"] | float %}
+        {{ (2 * 1000 * s / w) | round(0) }}
+      {% endif %}
+    {%- endfor %}
+  unit_of_measurement: "Wh"
+
