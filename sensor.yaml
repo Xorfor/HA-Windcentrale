@@ -6,6 +6,7 @@
   scan_interval: 60
   resource: https://zep-api.windcentrale.nl/production/1/live # for .../1/... replace the '1' for the id of your windmill
   json_attributes:
+    - powerProducerId
     - windSpeed
     - windDirection
     - powerAbsTot
@@ -14,8 +15,13 @@
     - diameter
     - rpm
     - pulsating
+    - kwh
+    - kwhForecast
     - hoursRunThisYear
     - runPercentage
+    - windSpeedForecast
+    - windDirectionForecast
+    - timestamp
   value_template: "{{ value_json.powerAbsWd * 2 }}" # for ... * 2 ... replace the '2' for the number of windshares you own
   unit_of_measurement: "W"
 - platform: template
