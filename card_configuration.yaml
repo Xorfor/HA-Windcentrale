@@ -1,0 +1,23 @@
+type: custom:apexcharts-card
+header:
+  title: Windcentrale
+  show: true
+  standard_format: true
+  show_states: true
+apex_config:
+  chart:
+    height: 300px
+  yaxis:
+    tickAmount: 6
+graph_span: 8d
+span:
+  start: day
+  offset: '-7d'
+stacked: true
+series:
+  - entity: sensor.de_grote_geert_energy
+    name: De Grote Geert
+    type: column
+    group_by:
+      func: max
+      duration: 1d
