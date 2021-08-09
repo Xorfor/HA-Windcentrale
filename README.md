@@ -32,8 +32,10 @@ You can use [customize.yaml](customize.yaml) to add nice icons.
 Also change the names for eg. the sensor, friendly_name, etc. in the name of your windmill.
 
 ## Data
-### URL example
+### URL examples
 https://zep-api.windcentrale.nl/production/1/live
+
+https://zep-api.windcentrale.nl/production/1
 
 ### Output
 The json output looks like:
