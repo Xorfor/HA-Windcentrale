@@ -5,7 +5,7 @@ If you have shares from [de Windcentrale](//windcentrale.nl), this configuration
 [By me a 🍺](https://www.buymeacoffee.com/xorfor)
 
 ## Prerequisites
-To configure a windmill from the WindCentrale in HA, you needs to know, the id from the windmill and the number of windshares you own.
+To configure a windmill from the WindCentrale in HA, you needs to know, the `ID` from the windmill and the number of windshares you own.
 The id can be found in the following table:
 
 | Name              |   ID | ParkID | # Winddelen |
