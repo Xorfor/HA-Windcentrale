@@ -1,6 +1,6 @@
 type: custom:apexcharts-card
 header:
-  title: Windcentrale
+  title: Energy
   show: true
   standard_format: true
   show_states: true
@@ -8,7 +8,7 @@ apex_config:
   chart:
     height: 300px
   yaxis:
-    tickAmount: 6
+    tickAmount: 5
 graph_span: 8d
 span:
   start: day
@@ -19,5 +19,5 @@ series:
     name: De Grote Geert
     type: column
     group_by:
-      func: max
+      func: last
       duration: 1d
